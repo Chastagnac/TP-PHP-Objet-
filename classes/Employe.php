@@ -16,6 +16,8 @@ class employe {
         $this->dateDenaissance = $dateDenaissance;
         $this->setSalaireM($salaireM);//permet de recuperer le salaireM via la méthode
     }
+    
+    
 
     public function getNumero(): int {
         return $this->numero;

@@ -1,14 +1,20 @@
-<?php 
+<?php
+
 include 'classes/Employe.php';
 include 'include/Traitement.php';
-
+include 'classes/Projet.php';
 /*
  * Cette instruction appel la methode instanciationUnEmploye
  */
-try{
+try {
+    Traitement::instanciationProjetV1();
+    
+    
     Traitement::instanciationUnEmploye();
+    
     Traitement::instanciationUnEmployeErreur();
-    Traitement::instanciationUnEmploye();//il n'apparait pas car l'instanciationUnEmployeErreur a retrouné une erreur.
+    
+    
 } catch (Exception $ex) {
     echo $ex->getMessage();
 }

@@ -7,7 +7,7 @@ class Projet {
     private int $dureePrevue;
 
     function __construct(string $codeProjet, string $nomProjet, int $dureePrevue) {
-        
+
         $this->codeProjet = $codeProjet;
         $this->nomProjet = $nomProjet;
         $this->dureePrevue = $dureePrevue;
@@ -20,9 +20,13 @@ class Projet {
     public function getNomProjet(): string {
         return $this->nomProjet;
     }
+
+    public function setDureePrevue(int $nbJours): void {
+        $this->dureePrevue = $nbJours;
+    }
     
-    public function setDureePrevue(): void{
-        //todo
+      public function __toString(): string {
+        return $this->getCodeProjet() . " - " . $this->getNomProjet();
     }
 
 }

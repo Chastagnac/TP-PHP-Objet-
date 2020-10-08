@@ -45,11 +45,9 @@ class employe {
         }
     }
 
-    
-    
     /*
      * $this->dateDenaissance->format('d/m/Y') definit le format de la date
-     */
+    */
     public function __toString(): string {
         return $this->numero . " - " . $this->getNom() . " - " . $this->getPrenom() . " - " . $this->dateDenaissance->format('d/m/Y') . " - " . $this->getSalaireM();
     }

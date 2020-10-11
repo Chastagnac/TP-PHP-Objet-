@@ -19,19 +19,21 @@ class EmployeInformaticien extends Employe {
     public function getPrime(): int {
         return $this->primeM;
     }
+    
+    
 
-    public function setPrime(int $unePrime): void {
-        if ($unePrime > (parent::salaireM * 0.30)) {
-            throw new Exception("La prime ne peut pas excéder 30%");
+    function setPrimeM(int $primeM): void {
+        if ($primeM <= ($this->salaireM * 0.3)) { // prime doit être inférieur à 30ù du salaire
+            $this->primeM = $primeM;
         } else {
-            $this->salaireM += $unePrime;
+            throw new Exception("La prime ne doit pas excéder 30% du salaire");
         }
     }
 
     public function __toString(): string {
-        return "Informaticien : ". parent::getNumero().
-                " - " . parent::getNom(). " - ". parent::getPrenom(). " - " . parent::getDateDeNaissance()->format('d/m/Y'). " - ". parent::getSalaireM(). " - ".
-                '<br>'. "- Projet : ". $this->sonProjet->getCodeProjet(). " - ". $this->sonProjet->getNomProjet(). " - " ;
+        return "Informaticien : " . parent::getNumero() .
+                " - " . parent::getNom() . " - " . parent::getPrenom() . " - " . parent::getDateDeNaissance()->format('d/m/Y') . " - " . parent::getSalaireM() . " - " .
+                '<br>' . "- Projet : " . $this->sonProjet->getCodeProjet() . " - " . $this->sonProjet->getNomProjet() . " - ". $this->sonProjet->getDureePrevue();
     }
 
 }

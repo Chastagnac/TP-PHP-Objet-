@@ -21,9 +21,15 @@ class Projet {
         return $this->nomProjet;
     }
 
+    PUBLIC FUNCTION getDureePrevue(): int {
+        return $this->dureePrevue;
+    }
+    
     public function setDureePrevue(int $nbJours): void {
         $this->dureePrevue = $nbJours;
     }
+    
+    
     
       public function __toString(): string {
         return "Projet : " . $this->getCodeProjet() . " - " . $this->getNomProjet();

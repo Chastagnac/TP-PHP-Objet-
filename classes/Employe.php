@@ -1,6 +1,7 @@
 <?php
 
-class employe {
+//Permet une fonction de sécurité et d'intégrité.   la classe employe ne sera pas instanciable et devra obligatoirement etre herité. 
+abstract class employe {
 
     protected int $numero;
     protected string $nom;
@@ -17,6 +18,7 @@ class employe {
         $this->setSalaireM($salaireM);//permet de recuperer le salaireM via la méthode
     }
     
+    public abstract function gainAnnuel(): float;// elle est abstraite car elle appartient à une classe abtraite et elle ne contient pas de corps car elle peut être redéfinie.
     
 
     public function getNumero(): int {

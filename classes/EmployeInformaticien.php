@@ -12,6 +12,10 @@ class EmployeInformaticien extends Employe {
         $this->primeM = 0;
     }
 
+    public function gainAnnuel(): float {
+        return ($this->salaireM * 12) + ($this->primeM * 12);
+    }
+
     public function getSonProjet(): Projet {
         return $this->sonProjet;
     }
@@ -19,8 +23,6 @@ class EmployeInformaticien extends Employe {
     public function getPrime(): int {
         return $this->primeM;
     }
-    
-    
 
     function setPrimeM(int $primeM): void {
         if ($primeM <= ($this->salaireM * 0.3)) { // prime doit être inférieur à 30ù du salaire
@@ -33,7 +35,8 @@ class EmployeInformaticien extends Employe {
     public function __toString(): string {
         return "Informaticien : " . parent::getNumero() .
                 " - " . parent::getNom() . " - " . parent::getPrenom() . " - " . parent::getDateDeNaissance()->format('d/m/Y') . " - " . parent::getSalaireM() . " - " .
-                '<br>' . "- Projet : " . $this->sonProjet->getCodeProjet() . " - " . $this->sonProjet->getNomProjet() . " - ". $this->sonProjet->getDureePrevue();
+                '<br>' . "- Projet : " . $this->sonProjet->getCodeProjet() . " - " . $this->sonProjet->getNomProjet() . " - " . $this->sonProjet->getDureePrevue().
+                '<br>';
     }
 
 }

@@ -1,4 +1,5 @@
 <?php
+namespace ClassesMetier\RD;
 
 class Projet {
 

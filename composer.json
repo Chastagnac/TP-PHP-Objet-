@@ -4,8 +4,13 @@
     "authors": [
         {
             "name": "Léo",
-            "email": "your@email.here"
+            "email": "leochastagnac@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ClassesMetier\\": "classes/"
+        }
+    }
 }

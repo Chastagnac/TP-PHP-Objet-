@@ -1,5 +1,7 @@
 <?php
 
+namespace ClassesMetier\DRH;
+
 class EmployeNonInformaticien extends Employe {
 
     private int $primeA;

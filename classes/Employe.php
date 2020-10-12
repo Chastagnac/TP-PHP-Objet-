@@ -1,5 +1,7 @@
 <?php
 
+namespace ClassesMetier\DRH;
+
 //Permet une fonction de sécurité et d'intégrité.   la classe employe ne sera pas instanciable et devra obligatoirement etre herité. 
 abstract class employe {
 

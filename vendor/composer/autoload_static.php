@@ -4,11 +4,35 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit82cf7b4d74ed0fdc74306bb381bd22ee
+class ComposerStaticInit487e564df87ea374b9385843e1d3e6ac
 {
+    public static $prefixLengthsPsr4 = array (
+        'C' => 
+        array (
+            'ClassesMetier\\' => 14,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'ClassesMetier\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
+        ),
+    );
+
+    public static $classMap = array (
+        'ClassesMetier\\DRH\\EmployeInformaticien' => __DIR__ . '/../..' . '/classes/EmployeInformaticien.php',
+        'ClassesMetier\\DRH\\EmployeNonInformaticien' => __DIR__ . '/../..' . '/classes/EmployeNonInformaticien.php',
+        'ClassesMetier\\DRH\\employe' => __DIR__ . '/../..' . '/classes/Employe.php',
+        'ClassesMetier\\RD\\Projet' => __DIR__ . '/../..' . '/classes/Projet.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit487e564df87ea374b9385843e1d3e6ac::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit487e564df87ea374b9385843e1d3e6ac::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit487e564df87ea374b9385843e1d3e6ac::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,7 +1,9 @@
 <?php
 
-include 'classes/EmployeInformaticien.php';
-include 'classes/EmployeNonInformaticien.php';
+use ClassesMetier\DRH\EmployeNonInformaticien;
+use ClassesMetier\DRH\EmployeInformaticien;
+use ClassesMetier\RD\Projet;
+
 
 class Traitement {
 

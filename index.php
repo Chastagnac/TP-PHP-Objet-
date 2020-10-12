@@ -2,7 +2,6 @@
 
 namespace APP;
 
-
 require_once './vendor/autoload.php';
 include 'include/Traitement.php';
 

@@ -6,7 +6,7 @@ class EmployeNonInformaticien extends Employe {
 
     private int $primeA;
 
-    function __construct(int $numero, string $nom, string $prenom, DateTime $dateDenaissance, float $salaireM) {
+    function __construct(int $numero, string $nom, string $prenom, \DateTime $dateDenaissance, float $salaireM) {
         parent::__construct($numero, $nom, $prenom, $dateDenaissance, $salaireM);
         $this->primeA = 0;
     }

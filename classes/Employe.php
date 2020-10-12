@@ -8,11 +8,11 @@ abstract class employe {
     protected int $numero;
     protected string $nom;
     protected string $prenom;
-    protected DateTime $dateDenaissance;
+    protected \DateTime $dateDenaissance;
     protected int $salaireM;
     private const MINSALAIRE = 1000; //C'est une constante donc on s'appelle avec le mot clée self::nomconst
 
-    function __construct(int $numero, string $nom, string $prenom, DateTime $dateDenaissance, int $salaireM) {
+    function __construct(int $numero, string $nom, string $prenom, \DateTime $dateDenaissance, int $salaireM) {
         $this->numero = $numero;
         $this->nom = $nom;
         $this->prenom = $prenom;
@@ -35,7 +35,7 @@ abstract class employe {
         return $this->prenom;
     }
 
-    public function getDateDeNaissance(): DateTime {
+    public function getDateDeNaissance(): \DateTime {
         return $this->dateDenaissance;
     }
 

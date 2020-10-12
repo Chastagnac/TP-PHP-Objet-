@@ -2,12 +2,12 @@
 
 namespace ClassesMetier\DRH;
 
-class EmployeInformaticien extends Employe {
+class EmployeInformaticien extends employe {
 
     private int $primeM;
-    private Projet $sonProjet;
+    private \ClassesMetier\RD\Projet $sonProjet;
 
-    function __construct(int $numero, string $nom, string $prenom, DateTime $dateDenaissance, int $salaireM, Projet $sonProjet) {
+    function __construct(int $numero, string $nom, string $prenom, \DateTime $dateDenaissance, int $salaireM, \ClassesMetier\RD\Projet $sonProjet) {
         parent::__construct($numero, $nom, $prenom, $dateDenaissance, $salaireM);
 
         $this->sonProjet = $sonProjet;
@@ -18,7 +18,7 @@ class EmployeInformaticien extends Employe {
         return ($this->salaireM * 12) + ($this->primeM * 12);
     }
 
-    public function getSonProjet(): Projet {
+    public function getSonProjet(): \ClassesMetier\RD\Projet {
         return $this->sonProjet;
     }
 
@@ -30,7 +30,7 @@ class EmployeInformaticien extends Employe {
         if ($primeM <= ($this->salaireM * 0.3)) { // prime doit être inférieur à 30ù du salaire
             $this->primeM = $primeM;
         } else {
-            throw new Exception("La prime ne doit pas excéder 30% du salaire");
+            throw new \Exception("La prime ne doit pas excéder 30% du salaire");
         }
     }
 
